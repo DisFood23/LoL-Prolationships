@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rival Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <div class="brand">
+      <h1>Rival Map</h1>
+      <p>Dummy data. Fictional teams and players.</p>
+    </div>
+    <button id="recenter" class="btn" type="button">Recenter</button>
+  </header>
+
+  <div class="stage">
+    <main id="viewport" class="viewport" tabindex="0" aria-label="Match map. Scroll or drag in any direction.">
+      <div id="canvas" class="canvas">
+        <svg id="edges" width="2600" height="1700" viewBox="0 0 2600 1700" aria-hidden="true"></svg>
+        <div id="nodes"></div>
+      </div>
+    </main>
+
+    <aside id="panel" class="panel" hidden aria-live="polite"></aside>
+
+    <div class="legend" aria-hidden="true">
+      <span><i class="dot win"></i>Win</span>
+      <span><i class="dot loss"></i>Loss</span>
+      <span class="hint">Drag or scroll to explore. Click a player or team.</span>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
